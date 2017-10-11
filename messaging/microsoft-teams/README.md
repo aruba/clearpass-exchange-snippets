@@ -51,11 +51,11 @@ This is an endpoint context server action configuration to send messages to Micr
 
 7. The content tab contains the JSON payload with the message content. Modify the default text to include the required information
 
-8. Click Save to finish
+8. Click **Save** to finish
 
-9. Create an enforcement profile by navigating to Configuration > Enforcement > Profiles > Add
+9. Create an enforcement profile by navigating to **_Configuration > Enforcement > Profiles > Add_**
 
-10. Select the HTTP Enforcement template and give it a name
+10. Select the **HTTP Enforcement** template and give it a name
 
 11. On the Attributes tab, select **_outlook.office.com_** as the **Target Server** and for **Action**, select the name of the customized CSA that was created. Click **Save** to finish.
 
