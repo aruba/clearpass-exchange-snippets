@@ -1,4 +1,4 @@
-# ClearPass Exchange Integrate Snippets
+# ClearPass Exchange Integration Snippets
 
 This repo contains sample ClearPass Exchange configurations for popular services.
 
