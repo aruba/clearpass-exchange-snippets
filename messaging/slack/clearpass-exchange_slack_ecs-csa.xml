@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Wed Oct 25 22:14:28 EDT 2017" version="6.6"/>
+  <ContextServers>
+    <ContextServer bypassProxy="false" enableServer="true" validateServer="false" password="" username="" baseUrl="https://hooks.slack.com/services/" type="HTTP" server="hooks.slack.com"/>
+  </ContextServers>
+  <ContextServerActions>
+    <ContextServerAction content="{##NEWLINE##    &amp;quot;text&amp;quot;: &amp;quot;Summary message text goes here.\nClearPass is really awesome. I love Aruba ClearPass. Lots and lots of text. Aruba is amazing.&amp;quot;,##NEWLINE##	&amp;quot;attachments&amp;quot;: [##NEWLINE##        {##NEWLINE##            &amp;quot;fallback&amp;quot;: &amp;quot;Required plain-text summary of the attachment.&amp;quot;,##NEWLINE##            &amp;quot;color&amp;quot;: &amp;quot;#f00&amp;quot;,##NEWLINE##            &amp;quot;text&amp;quot;: &amp;quot;Optional text that appears within the attachment&amp;quot;,##NEWLINE##            &amp;quot;fields&amp;quot;: [##NEWLINE##                {##NEWLINE##                    &amp;quot;title&amp;quot;: &amp;quot;Label 1&amp;quot;,##NEWLINE##                    &amp;quot;value&amp;quot;: &amp;quot;Value 1&amp;quot;,##NEWLINE##                    &amp;quot;short&amp;quot;: false##NEWLINE##                },##NEWLINE##		{##NEWLINE##		     &amp;quot;title&amp;quot;: &amp;quot;Label 2&amp;quot;,##NEWLINE##		     &amp;quot;value&amp;quot;: &amp;quot;Value 2&amp;quot;,##NEWLINE##		     &amp;quot;short&amp;quot;: false##NEWLINE##		},##NEWLINE##		{##NEWLINE##		     &amp;quot;title&amp;quot;: &amp;quot;Label 3&amp;quot;,##NEWLINE##		     &amp;quot;value&amp;quot;: &amp;quot;Value 3&amp;quot;,##NEWLINE##		     &amp;quot;short&amp;quot;: false##NEWLINE##		}##NEWLINE##            ]##NEWLINE##        }##NEWLINE##    ]##NEWLINE##}" contentType="JSON" url="replace-me-replace-me" disableBasicAuth="true" method="POST" description="Send message to Slack via webhook" serverName="hooks.slack.com" action="Send Message to Slack" type="HTTP">
+      <Headers value="application/json" name="Content-Type"/>
+    </ContextServerAction>
+  </ContextServerActions>
+</TipsContents>
