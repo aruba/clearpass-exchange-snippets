@@ -37,7 +37,7 @@ This will import the Context Server Action and Enforcement profile (treat these 
 
 ### ClearPass: Customization
 
-1. Navigate to  **_Administration » Dictionaries » Context Server Actions _**, select the **Send Email** action and then click **Copy** to duplicate it
+1. Navigate to  **_Administration » Dictionaries » Context Server Actions_**, select the **Send Email** action and then click **Copy** to duplicate it
 
 2. Give the CSA a new name to reflect it's use
 
