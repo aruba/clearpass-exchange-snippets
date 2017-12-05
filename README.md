@@ -6,5 +6,6 @@ This repo contains sample ClearPass Exchange configurations for popular services
 
 
 ## Messaging Services
+* [ClearPass SMTP](messaging/clearpass-smtp/)
 * [Microsoft Teams](messaging/microsoft-teams/)
 * [Slack](messaging/slack/)

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Fri Dec 01 15:03:50 EST 2017" version="6.7"/>
+  <GenericEnfProfiles>
+    <GenericEnfProfile description="Send an email via the SMTP service configured under External Servers &gt; Messaging Setup. Uses the 'Send Email' context server action." name="Send Email" action="Accept" type="HTTP">
+      <ProfileParams displayValue="localhost" value="localhost" name="TargetServer"/>
+      <ProfileParams displayValue="Send Email" value="Send Email (Generic HTTP)" name="Action"/>
+    </GenericEnfProfile>
+  </GenericEnfProfiles>
+  <ContextServerActions>
+    <ContextServerAction content="{##NEWLINE##  &amp;quot;to&amp;quot;: [&amp;quot;to@to.to&amp;quot;],##NEWLINE##  &amp;quot;subject&amp;quot;: &amp;quot;Hello from ClearPass!&amp;quot;,##NEWLINE##  &amp;quot;message&amp;quot;: &amp;quot;Hey there, this is ClearPass!&amp;quot;,##NEWLINE##  &amp;quot;cc_recipients&amp;quot;: [&amp;quot;cc1@cc.cc&amp;quot;, &amp;quot;cc2@cc.cc&amp;quot;],##NEWLINE##  &amp;quot;bcc_recipients&amp;quot;: [&amp;quot;bcc@bcc.bcc&amp;quot;]##NEWLINE##}" contentType="JSON" url="/api/email/send" authMethod="none" method="POST" description="Send an email via the SMTP service configured under External Servers &gt; Messaging Setup" serverName="localhost" action="Send Email" type="HTTP">
+      <Headers value="application/json" name="Content-Type"/>
+      <Headers value="application/json" name="Accept"/>
+    </ContextServerAction>
+  </ContextServerActions>
+</TipsContents>
