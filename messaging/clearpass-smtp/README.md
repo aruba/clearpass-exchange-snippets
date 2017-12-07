@@ -1,19 +1,19 @@
 # ClearPass Exchange: ClearPass SMTP
 
-![version 2017.01](https://img.shields.io/badge/Version-2017.01-brightgreen.svg "version 2017.01") [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Aruba Security Group](https://img.shields.io/badge/Source-Aruba_Security-orange.svg "Aruba Security Group")
+![version 2017.01a](https://img.shields.io/badge/Version-2017.01a-brightgreen.svg "version 2017.01a") [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Aruba Security Group](https://img.shields.io/badge/Source-Aruba_Security_Group-orange.svg "Aruba Security Group")
 
 ## Overview
 
 This is an enforcement profile and endpoint context server action configuration to send email messages via the SMTP server defined in ClearPass 'Messaging Setup'.
 
-![Sample Message Card](assets/teams_message-card_look-feel.png)
-
 ## Current Version
 
-2017.01 (2017-12-04)
+2017.01a (2017-12-07)
 
 ## Change Log
 
+* 2017.01a (2017-12-07)
+ _Minor cosmetic changes to documentation_
 * 2017.01 (2017-12-04)
  _Initial Release. Tested with ClearPass 6.7.0_
 
