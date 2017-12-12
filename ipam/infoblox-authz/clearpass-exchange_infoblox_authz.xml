@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Mon Dec 11 11:15:46 PST 2017" version="6.7"/>
+  <AuthSources>
+    <AuthSource description="Pulls endpoint information from Infoblox MAC filters" name="Infoblox DHCP Filter Authorization" isAuthorizationSource="true" type="HTTP">
+      <NVPair value="https://replace.me.with.infoblox.fqdn/wapi/v2.7/" name="base_url"/>
+      <NVPair value="replace-me-with-infoblox-api-username" name="username"/>
+      <NVPair value="replace-me-with-infoblox-api-password" name="password"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="macfilteraddress?mac=%{Connection:Client-Mac-Address-Colon}" filterName="mac-filter">
+          <Attributes>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="Username" attrName="0.username"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Boolean" aliasName="Registered User" attrName="0.is_registered_user"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="MAC Filter Name" attrName="0.filter"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="Comment" attrName="0.comment"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Boolean" aliasName="Never Expires" attrName="0.never_expires"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Date-Time" aliasName="Expiration Time" attrName="0.expiration_time"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>
