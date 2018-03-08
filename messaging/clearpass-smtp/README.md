@@ -27,7 +27,7 @@ This CSA can be used in ClearPass 6.7 and higher as it is dependent on the new E
 
 ### ClearPass: Importing Template
 
-1. Download the enforcement profile export > [clearpass-exchange_clearpass-smtp_enfprof-csa.xml](clearpass-exchange_clearpass-smtp_enfprof-csa.xml)
+1. Download the enforcement profile export (Save Link As) > [clearpass-exchange_clearpass-smtp_enfprof-csa.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/messaging/clearpass-smtp/clearpass-exchange_clearpass-smtp_enfprof-csa.xml)
 
 2. Navigate to  **_Configuration » Enforcement » Profiles_**
 
