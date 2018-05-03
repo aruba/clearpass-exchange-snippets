@@ -23,7 +23,7 @@ This is a ClearPass authorization source for leveraging GeoIP data from ipstack 
 ## Setup
 ### ClearPass
 
-1. Download the ipstack authorization source > [clearpass-exchange_ipstack_http-authz.xml](clearpass-exchange_ipstack_http-authz.xml)
+1. Download the ipstack authorization source > [clearpass-exchange_ipstack_http-authz.xml](https://raw.githubusercontent.com/aruba/clearpass-exchange-snippets/master/geoip/ipstack/clearpass-exchange_ipstack_http-authz.xml)
 
 2. Log in to the ClearPass admin UI, navigate to  **_Configuration > Authentication > Sources_**, and then click **Import**
 
