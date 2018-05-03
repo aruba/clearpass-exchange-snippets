@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Thu May 03 15:49:57 EDT 2018" version="6.7"/>
+  <AuthSources>
+    <AuthSource description="GeoIP via ipstack for %{Connection:Client-IP-Address}" name="ipstack GeoIP" isAuthorizationSource="true" type="HTTP">
+      <NVPair value="http://api.ipstack.com/" name="base_url"/>
+      <NVPair value="ipstack" name="username"/>
+      <NVPair value="ipstack" name="password"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="%{Connection:Client-IP-Address}?access_key=" filterName="geo-info">
+          <Attributes>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Continent Name" attrName="continent_name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Continent Code" attrName="continent_code"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Country Code" attrName="country_code"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Country Name" attrName="country_name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Region Code" attrName="region_code"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Region Name" attrName="region_name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="City" attrName="city"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>
