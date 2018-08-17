@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Thu Aug 16 15:24:02 IST 2018" version="6.7"/>
+  <AuthSources>
+    <AuthSource description="Microsoft Intune Authorization via the Intune ClearPass Extension" name="Microsoft Intune" isAuthorizationSource="false" type="HTTP">
+      <NVPair value="http://X.X.X.X" name="base_url"/>
+      <NVPair value="notuser" name="username"/>
+      <NVPair value="notuser" name="password"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="?macAddress=%{Connection:Client-Mac-Address-NoDelim}" filterName="Intune Authorization">
+          <Attributes>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="IMEI" attrName="msft_imei"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Device Owner" attrName="msft_deviceOwner"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Azure Device ID" attrName="msft_azureDeviceId"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Compliance State" attrName="msft_complianceState"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Is Managed" attrName="msft_isManaged"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Last Contact Time UTC" attrName="msft_lastContactTimeUtc"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="MEID" attrName="msft_meid"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="MAC Address" attrName="msft_macAddress"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Manufacturer" attrName="msft_manufacturer"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Model" attrName="msft_model"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="OS Version" attrName="msft_osVersion"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Serial Number" attrName="msft_serialNumber"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="UDID" attrName="msft_udid"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>

@@ -1,0 +1,24 @@
+
+# ClearPass Extension: Microsoft Intune
+
+![version 2018.01](https://img.shields.io/badge/Version-2018.01-brightgreen.svg "version 2018.01") ![type Extension Authorization Source](https://img.shields.io/badge/Type-Extension%20Auth%20Source-blue.svg "type Extension Auth Source") ![Aruba Security Group](https://img.shields.io/badge/Source-Aruba_Security-orange.svg "Aruba Security Group")
+
+
+## Overview
+This is a pre-built ClearPass Authentication Source used for authorization against Microsoft Intune via the ClearPass Extensions framework.
+
+Replace "X.X.X.X" for base_url with the Extension IP for your environment prior to import.
+
+## Download
+[clearpass-exchange_microsoft-teams_ecs-csa.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/microsoft-intune/clearpass-extension_microsoft-intune_auth-source.xml)
+
+## Extension Documentation
+link coming soon
+
+## Current Version
+2018.01 (2018-08-16)
+
+
+## License and Other Information
+Copyright (c) Hewlett Packard Enterprise Development LP. All Rights Reserved.
+
