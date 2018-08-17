@@ -10,7 +10,7 @@ This is a pre-built ClearPass Authentication Source used for authorization again
 Replace "X.X.X.X" for base_url with the Extension IP for your environment prior to import.
 
 ## Download
-[clearpass-exchange_microsoft-teams_ecs-csa.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/microsoft-intune/clearpass-extension_microsoft-intune_auth-source.xml)
+[clearpass-extension_microsoft-intune_auth-source.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/microsoft-intune/clearpass-extension_microsoft-intune_auth-source.xml)
 
 ## Extension Documentation
 link coming soon
