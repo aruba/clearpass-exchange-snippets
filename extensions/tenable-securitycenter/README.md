@@ -9,7 +9,7 @@ This is a pre-built ClearPass Enforcement Profile to trigger a security scan by 
 
 1. Download the XML profile > [clearpass-extension_tenable-securitycenter_enf-profile.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/tenable-securitycenter/clearpass-extension_tenable-securitycenter_enf-profile.xml)
 2. Open this file in your favorite editor
-3. Use the Find and Replace feature of the editor to replace "<<Tenable Extension IP>>” with the actual IP address of the Tenable Extension configured (there are 5 occurences in this file
+3. Use the Find and Replace feature of the editor to replace ```<<Tenable Extension IP>>``` with the actual IP address of the Tenable Extension configured (there are 5 occurences in this file)
 4. Save the file and import into ClearPass (Configuration > Enforcement > Profiles, Import) 
 
 ## Download
