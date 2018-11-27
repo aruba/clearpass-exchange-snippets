@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Sun Nov 25 12:11:17 PST 2018" version="6.7"/>
+  <ContextServerActions>
+    <ContextServerAction content="{&amp;quot;shared-secret&amp;quot;: &amp;quot;%{shared-secret}&amp;quot;,&amp;quot;user&amp;quot;: &amp;quot;%{name}&amp;quot;,&amp;quot;ip-address&amp;quot;: &amp;quot;%{ip}&amp;quot;,&amp;quot;machine&amp;quot;: &amp;quot;%{machine}&amp;quot;,&amp;quot;domain&amp;quot;:&amp;quot;%{domain}&amp;quot;,&amp;quot;identity-source&amp;quot;: &amp;quot;Aruba ClearPass Policy Manager&amp;quot;,&amp;quot;session-timeout&amp;quot;: %{timeout},&amp;quot;calculate-roles&amp;quot;:1,&amp;quot;fetch-user-groups&amp;quot;: 1,&amp;quot;fetch-machine-groups&amp;quot;:1}" contentType="JSON" url="/_IA_API/v1.0/add-identity" authMethod="basic" method="POST" description="R80 - Inform Check Point that user logged in" serverName="<<Check Point Firewall IP>>" action="Check Point Login - AD User - R80" type="HTTP">
+      <Attributes value="<<Shared Secret>>" name="%{shared-secret}"/>
+      <Attributes value="28800" name="%{timeout}"/>
+      <Headers value="application/json" name="Content-Type"/>
+    </ContextServerAction>
+    <ContextServerAction content="{&amp;quot;shared-secret&amp;quot;: &amp;quot;%{shared-secret}&amp;quot;,&amp;quot;ip-address&amp;quot;: &amp;quot;%{ip}&amp;quot;}" contentType="JSON" url="/_IA_API/v1.0/delete-identity" authMethod="basic" method="POST" description="R80 - Inform Check Point that user logged out." serverName="<<Check Point Firewall IP>>" action="Check Point Logout - R80" type="HTTP">
+      <Attributes value="<<Shared Secret>>" name="%{shared-secret}"/>
+      <Headers value="application/json" name="Content-Type"/>
+    </ContextServerAction>
+    <ContextServerAction content="{&amp;quot;shared-secret&amp;quot;: &amp;quot;%{shared-secret}&amp;quot;,&amp;quot;user&amp;quot;: &amp;quot;%{name}&amp;quot;,&amp;quot;ip-address&amp;quot;: &amp;quot;%{ip}&amp;quot;,&amp;quot;machine&amp;quot;: &amp;quot;%{machine}&amp;quot;,&amp;quot;identity-source&amp;quot;: &amp;quot;Aruba ClearPass Policy Manager&amp;quot;,&amp;quot;session-timeout&amp;quot;: %{timeout},&amp;quot;user-groups&amp;quot;: %{user-groups},&amp;quot;machine-groups&amp;quot;: %{machine-groups},&amp;quot;roles&amp;quot;: %{roles},&amp;quot;fetch-user-groups&amp;quot;: 0,&amp;quot;fetch-machine-groups&amp;quot;:0}" contentType="JSON" url="/_IA_API/v1.0/add-identity" authMethod="basic" method="POST" description="R80 - Inform Check Point that user logged in." serverName="<<Check Point Firewall IP>>" action="Check Point Login - Guest User - R80" type="HTTP">
+      <Attributes value="<<Shared Secret>>" name="%{shared-secret}"/>
+      <Attributes value="28800" name="%{timeout}"/>
+      <Attributes value="[&quot;aruba-guest&quot;]" name="%{user-groups}"/>
+      <Attributes value="[&quot;aruba-guest-machine&quot;]" name="%{machine-groups}"/>
+      <Attributes value="[]" name="%{roles}"/>
+      <Headers value="application/json" name="Content-Type"/>
+    </ContextServerAction>
+  </ContextServerActions>
+</TipsContents>
