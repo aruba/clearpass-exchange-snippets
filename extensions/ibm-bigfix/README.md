@@ -7,7 +7,7 @@
 ## Overview
 This is a pre-built ClearPass Authentication Source used for authorization against IBM BigFix via the ClearPass Extensions framework.
 
-Replace "<BigFix Extension IP>" for base_url with the Extension IP for your environment prior to import.
+Replace ```<BigFix Extension IP>``` for base_url with the Extension IP for your environment prior to import.
 
 ## Download
 [clearpass-extension_ibm-bigfix_auth-source.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/ibm-bigfix/clearpass-extension_ibm-bigfix_auth-source.xml)
