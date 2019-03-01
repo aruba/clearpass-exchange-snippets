@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Tue Feb 19 00:55:20 PST 2019" version="6.7"/>
+  <AuthSources>
+    <AuthSource description="" name="BigFix AuthZ" isAuthorizationSource="true" type="HTTP">
+      <NVPair value="http://<BigFix Extension IP>/mac/" name="base_url"/>
+      <NVPair value="notused" name="username"/>
+      <NVPair value="notused" name="password"/>
+      <NVPair value="60" name="timeout"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="%{Connection:Client-Mac-Address-Hyphen}" filterName="BigFix ">
+          <Attributes>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="Integer" aliasName="BigFix Agent Version" attrName="BigFix Agent Version"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="BigFix Agent Type" attrName="BigFix Agent Type"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="BigFix Locked" attrName="BigFix Locked"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="BigFix Computer Type" attrName="BigFix Computer Type"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="BigFix Device Type" attrName="BigFix Device Type"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="BigFix IP Address" attrName="BigFix IP Address"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="BigFix IPv6 Address" attrName="BigFix IPv6 Address"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Date-Time" aliasName="BigFix Last Report Time" attrName="BigFix Last Report Time"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Date-Time" aliasName="BigFix Last Update" attrName="BigFix Last Update"/>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="Boolean" aliasName="BigFix Is Found" attrName="BigFix Is Found"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>

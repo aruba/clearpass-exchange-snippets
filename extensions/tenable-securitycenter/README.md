@@ -15,8 +15,6 @@ This is a pre-built ClearPass Enforcement Profile to trigger a security scan by 
 ## Download
 [clearpass-extension_tenable-securitycenter_enf-profile.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/tenable-securitycenter/clearpass-extension_tenable-securitycenter_enf-profile.xml)
 
-## Extension Documentation
-link coming soon
 
 ## Current Version
 2018.01 (2018-11-19)
