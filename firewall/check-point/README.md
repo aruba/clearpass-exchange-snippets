@@ -16,6 +16,8 @@ Importing this XML will create the Context Server Actions allowing ClearPass to 
 
 5. For sending Roles to Check Point where nested square-brackets is interpreted as nested arrays, download the SQL template and folow the directions in the Integration Guide to learn how to strip [] from default ClearPass Roles such as [User Authenticated].
 
+6. Test.
+
 
 ## Download
 [clearpass-exchange_checkpoint_csa_r80_30.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/firewall/check-point/clearpass-exchange_checkpoint_csa_r80_30.xml)
