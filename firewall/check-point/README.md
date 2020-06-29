@@ -20,7 +20,8 @@ Importing this XML will create the Context Server Actions allowing ClearPass to 
 
 ## Download
 [clearpass-exchange_checkpoint_csa_r80_30.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/firewall/check-point/clearpass-exchange_checkpoint_csa_r80_30.xml)
-[clearpass-sql_brackets=strip.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/firewall/check-point/clearpass-sql_brackets=strip.xml)
+
+[clearpass-sql_brackets-strip.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/firewall/check-point/clearpass-sql_brackets=strip.xml)
 
 ## Current Version
 2020.01 (2020-06-29)
