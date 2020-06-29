@@ -12,7 +12,10 @@ Importing this XML will create the Context Server Actions allowing ClearPass to 
 
 3. Use the Find and Replace feature of the editor to replace ```<<Check Point Firewall IP>>``` and ```<<Shared Secret>>``` with the actual values to be used for the integration (There are 3 such occurrences of each).
 
-4. Save the file and import into ClearPass (Administration > Dictionaries > Context Server Actions, Import) 
+4. Save the file and import into ClearPass (Administration > Dictionaries > Context Server Actions, Import)
+
+5. For sending Roles to Check Point where nested square-brackets is interpreted as nested arrays, download the SQL template and folow the directions in the Integration Guide to learn how to strip [] from default ClearPass Roles such as [User Authenticated].
+
 
 ## Download
 [clearpass-exchange_checkpoint_csa_r80.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/firewall/check-point/clearpass-exchange_checkpoint_csa_r80.xml)
