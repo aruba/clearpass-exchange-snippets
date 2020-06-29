@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Tue Jun 23 13:10:44 PDT 2020" version="6.9"/>
+  <AuthSources>
+    <AuthSource description="" name="CHKPT_GROUPS" isAuthorizationSource="true" type="Sql">
+      <NVPair value="36000" name="cache_timeout"/>
+      <NVPair value="PostgreSQL" name="sql_driver"/>
+      <NVPair value="localhost" name="server"/>
+      <NVPair value="tipsdb" name="db_name"/>
+      <NVPair value="appexternal" name="login"/>
+      <NVPair value="" name="password"/>
+      <NVPair value="10" name="timeout"/>
+      <NVPair value="cleartext" name="password_type"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="SELECT array_to_string(array_remove(string_to_array('%{Endpoint:CHKPT_ROLES}',', '), '[User Authenticated]'),'+') AS CHKPT_GROUPS_STRIP" filterName="chkpt-groups">
+          <Attributes>
+            <Attribute isUserAttr="false" isRole="false" attrDataType="String" aliasName="CHKPT_GROUPS_STRIP" attrName="CHKPT_GROUPS_STRIP"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>
