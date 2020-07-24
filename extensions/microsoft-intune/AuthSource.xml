@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Thu Jul 23 17:13:13 PDT 2020" version="6.9"/>
+  <AuthSources>
+    <AuthSource description="MSFT InTune authZ source" name="InTune-authZ-source" isAuthorizationSource="false" type="HTTP">
+      <NVPair value="http://172.17.0.9" name="base_url"/>
+      <NVPair value="notused" name="username"/>
+      <NVPair value="" name="password"/>
+      <NVPair value="60" name="timeout"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="?macAddress=%{Connection:Client-Mac-Address-NoDelim}" filterName="InTune-Authorozation-Source">
+          <Attributes>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_imei" attrName="msft_imei"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_deviceOwner" attrName="msft_deviceOwner"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_azureDeviceId" attrName="msft_azureDeviceId"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_complianceState" attrName="msft_complianceState"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_isManaged" attrName="msft_isManaged"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_lastContactTimeUtc" attrName="msft_lastContactTimeUtc"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_meid" attrName="msft_meid"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_macAddress" attrName="msft_macAddress"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_manufacturer" attrName="msft_manufacturer"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_model" attrName="msft_model"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_osVersion" attrName="msft_osVersion"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_serialNumber" attrName="msft_serialNumber"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_udid" attrName="msft_udid"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>
