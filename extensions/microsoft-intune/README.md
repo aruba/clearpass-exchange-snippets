@@ -13,7 +13,7 @@ Replace "X.X.X.X" for base_url with the Extension IP for your environment prior 
 [clearpass-extension_microsoft-intune_auth-source.xml](https://github.com/aruba/clearpass-exchange-snippets/raw/master/extensions/microsoft-intune/clearpass-extension_microsoft-intune_auth-source.xml)
 
 ## Current Version
-2018.01 (2018-08-16)
+2020.01 (2020-07-23)
 
 
 ## License and Other Information
