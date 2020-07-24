@@ -1,7 +1,7 @@
 
 # ClearPass Extension: Microsoft Intune
 
-![version 2020.01](https://img.shields.io/badge/Version-2018.01-brightgreen.svg "version 2018.01") ![type Extension Authorization Source](https://img.shields.io/badge/Type-Extension%20Auth%20Source-blue.svg "type Extension Auth Source") ![Aruba Security Group](https://img.shields.io/badge/Source-Aruba_Security-orange.svg "Aruba Security Group")
+![version 2020.01](https://img.shields.io/badge/Version-2020.01-brightgreen.svg "version 2020.01") ![type Extension Authorization Source](https://img.shields.io/badge/Type-Extension%20Auth%20Source-blue.svg "type Extension Auth Source") ![Aruba Security Group](https://img.shields.io/badge/Source-Aruba_Security-orange.svg "Aruba Security Group")
 
 
 ## Overview
