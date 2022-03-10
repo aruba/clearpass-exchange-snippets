@@ -3,26 +3,56 @@
   <TipsHeader exportTime="Thu Jul 23 17:13:13 PDT 2020" version="6.9"/>
   <AuthSources>
     <AuthSource description="MSFT InTune authZ source" name="InTune-authZ-source" isAuthorizationSource="false" type="HTTP">
-      <NVPair value="http://X.X.X.X" name="base_url"/>
+      <NVPair value="http://X.X.X.X/device/info/" name="base_url"/>
       <NVPair value="notused" name="username"/>
       <NVPair value="" name="password"/>
       <NVPair value="60" name="timeout"/>
       <Filters>
-        <Filter paramValues="" filterQuery="?macAddress=%{Connection:Client-Mac-Address-NoDelim}" filterName="InTune-Authorozation-Source">
+        <Filter paramValues="" filterQuery="%{Connection:Client-Mac-Address-Hyphen}" filterName="InTune-Authorization-Source">
           <Attributes>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_imei" attrName="msft_imei"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_deviceOwner" attrName="msft_deviceOwner"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_azureDeviceId" attrName="msft_azureDeviceId"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_complianceState" attrName="msft_complianceState"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_isManaged" attrName="msft_isManaged"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_lastContactTimeUtc" attrName="msft_lastContactTimeUtc"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_meid" attrName="msft_meid"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_macAddress" attrName="msft_macAddress"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_manufacturer" attrName="msft_manufacturer"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_model" attrName="msft_model"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_osVersion" attrName="msft_osVersion"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_serialNumber" attrName="msft_serialNumber"/>
-            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="msft_udid" attrName="msft_udid"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Source" attrName="Source"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Last Updated" attrName="Intune Last Updated"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune ID" attrName="Intune ID"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune User ID" attrName="Intune User ID"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Device Name" attrName="Intune Device Name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Managed Device Owner Type" attrName="Intune Managed Device Owner Type"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Enrolled Date Time" attrName="Intune Enrolled Date Time"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Last Sync Date Time" attrName="Intune Last Sync Date Time"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Operating System" attrName="Intune Operating System"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Compliance State" attrName="Intune Compliance State"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Jail Broken" attrName="Intune Jail Broken"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Management Agent" attrName="Intune Management Agent"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune OS Version" attrName="Intune OS Version"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Eas Activated" attrName="Intune Eas Activated"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Eas Device ID" attrName="Intune Eas Device ID"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Eas Activation Date Time" attrName="Intune Eas Activation Date Time"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Azure AD Registered" attrName="Intune Azure AD Registered"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Device Enrollment Type" attrName="Intune Device Enrollment Type"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Azure AD Device Id" attrName="Intune Azure AD Device Id"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Device Registration State" attrName="Intune Device Registration State"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Device Category Display Name" attrName="Intune Device Category Display Name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Is Supervised" attrName="Intune Is Supervised"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Exchange Last Successful Sync Date Time" attrName="Intune Exchange Last Successful Sync Date Time"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Exchange Access State" attrName="Intune Exchange Access State"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Exchange Access State Reason" attrName="Intune Exchange Access State Reason"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Remote Assistance Session Url" attrName="Intune Remote Assistance Session Url"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Remote Assistance Session Error Details" attrName="Intune Remote Assistance Session Error Details"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Is Encrypted" attrName="Intune Is Encrypted"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune User Principal Name" attrName="Intune User Principal Name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Model" attrName="Intune Model"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Manufacturer" attrName="Intune Manufacturer"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune IMEI" attrName="Intune IMEI"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Compliance Grace Period Expiration Date Time" attrName="Intune Compliance Grace Period Expiration Date Time"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Serial Number" attrName="Intune Serial Number"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Phone Number" attrName="Intune Phone Number"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune User Display Name" attrName="Intune User Display Name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Wi Fi MAC Address" attrName="Intune Wi Fi MAC Address"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Subscriber Carrier" attrName="Intune Subscriber Carrier"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune MEID" attrName="Intune MEID"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Total Storage Space in Bytes" attrName="Intune Total Storage Space in Bytes"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Free Storage Space in Bytes" attrName="Intune Free Storage Space in Bytes"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Managed Device Name" attrName="Intune Managed Device Name"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="Intune Partner Reported Threat State" attrName="Intune Partner Reported Threat State"/>
           </Attributes>
         </Filter>
       </Filters>
