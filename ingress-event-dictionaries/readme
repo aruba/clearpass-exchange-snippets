@@ -2,3 +2,5 @@ The PANW Threat inbound and outbound ingress event dictionaries have to be impor
 ClearPass Administration > Dictionaries > Ingress Events to process threat syslogs from PAN.
 
 The inbound and outbound dictionaries have been validated against ClearPass 6.10.4 and PAN OS 10.1.3
+
+Secret to import the file is: ArubaR0cks!
