@@ -1,0 +1,1 @@
+date="2022-02-07" time="14:18:57" tz="PST" logid="0606000001" devid="FAIVMSTM21000033" type="ndr" subtype="Weak cipher" severity="medium" sessionid=569705 alproto="IMAP" tlproto="TCP" srcip="172.16.99.17" srcport=63310 dstip="18.2.1.114" dstport=443 behavior="CONN" vers="2" cipher="TLS_NULL_WITH_NULL_NULL" ciphername="weak cipher"

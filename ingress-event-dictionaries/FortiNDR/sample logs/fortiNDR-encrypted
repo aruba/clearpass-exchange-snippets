@@ -1,0 +1,1 @@
+date="2022-02-11" time="10:19:03" tz="PST" logid="0603000001" devid="FAI35FT321000001" type="ndr" subtype="Encrypted" severity="critical" sessionid=11554817 alproto="TLS" tlproto="TCP" srcip="172.16.99.17" srcport=5326 dstip="173.245.59.98" dstport=443 behavior="CONN" vers="7" cipher="TLS_AES_256_GCM_SHA384" md5="f436b9416f37d134cadd04886327d3e8"

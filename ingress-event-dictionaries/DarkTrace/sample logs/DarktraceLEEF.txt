@@ -1,0 +1,5 @@
+Oct  3 20:07:37 usw1-54655-01.cloud.darktrace.com LEEF:1.0|Darktrace|DCIP|5.2.24|Antigena/Network/Compliance/Antigena Connection Seen V5|externalId=2369    src=192.168.1.3 shost=wef     srcMAC=06:26:ce:38:22:3e        srcType=Server  sev=9   pid=2308       darktraceUrl=https://usw1-54655-01.cloud.darktrace.com/#modelbreach/2369        usrName=
+
+Oct  3 20:07:38 usw1-54655-01.cloud.darktrace.com LEEF:1.0|Darktrace|DCIP|5.2.24|Antigena/Network/Compliance/Antigena Connection Seen V5|externalId=2370     src=192.168.1.4 shost=win10   srcMAC=06:c4:ae:ba:84:16        srcType=Desktop sev=9   pid=2308       darktraceUrl=https://usw1-54655-01.cloud.darktrace.com/#modelbreach/2370        usrName=
+
+Oct  3 20:07:38 usw1-54655-01.cloud.darktrace.com LEEF:1.0|Darktrace|DCIP|5.2.24|Antigena/Network/Compliance/Antigena Connection Seen V5|externalId=2371       src=192.168.1.2 dst=192.168.1.2 srcMAC=06:78:8a:48:64:c0        srcType=DNS Server      sev=9   pid=2308       darktraceUrl=https://usw1-54655-01.cloud.darktrace.com/#modelbreach/2371

@@ -1,0 +1,1 @@
+date="2022-02-09" time="16:43:13" tz="PST" logid="0602000001" devid="FAIVMSTM21000033" type="ndr" subtype="Botnet" severity="high" sessionid=63313 alproto="DNS" tlproto="UDP" srcip="172.16.99.17" srcport=10000 dstip="18.1.1.100" dstport=53 behavior="CONN" botname="botnet Andromeda" hostname="orrisbirth.com"

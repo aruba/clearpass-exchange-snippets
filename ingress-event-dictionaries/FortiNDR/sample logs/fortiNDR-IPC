@@ -1,0 +1,1 @@
+date="2022-02-10" time="19:16:56" tz="PST" logid="0604000001" devid="FAI35FT321000001" type="ndr" subtype="IPS attack" severity="low" sessionid=9237954 alproto="OTHER" tlproto="UDP" srcip="172.16.99.17" srcport=57325 dstip="194.69.172.33" dstport=53 behavior="CONN" vname="DNS.Amplification.Detection" vulntype="Anomaly" 
