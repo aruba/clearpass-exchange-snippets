@@ -1,0 +1,4 @@
+The ingress event dictionaries have to be imported to:
+ClearPass Administration > Dictionaries > Ingress Events to process syslog messages
+
+Secret to import the file is: ArubaR0cks!
