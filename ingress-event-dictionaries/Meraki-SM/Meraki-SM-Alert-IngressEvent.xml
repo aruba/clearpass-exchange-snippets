@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Wed Feb 07 08:14:13 PST 2024" version="6.9"/>
+  <IngressEvents>
+    <IngressEvent>
+      <Vendor>Meraki</Vendor>
+      <Description>System Manager</Description>
+      <FormatName>Meraki-SM-Alert</FormatName>
+      <Format>syslog_priority,syslog_version,syslog_timestamp,syslog_hostname,system_name,syslog_pid,syslog_msgid,occurredAt,organizationId,organizationName,networkId,networkName,alertId,alertType</Format>
+      <Prefix>Meraki-Log</Prefix>
+      <Enabled>true</Enabled>
+      <Sample>&lt;164&gt;1 2020-04-30T17:11:41.109Z api.meraki.com meraki-extension 24936 - - CEF:0|ALERT|2020-04-28T23:01:27.786718Z|460106|Test Network|L_573083052582979422|New York|573083052595461022|Clients are violating their security policy|</Sample>
+      <Filter>filter {
+          grok {
+            match =&gt; { 'message' =&gt; "&lt;%{POSINT:syslog_priority}&gt;%{NONNEGINT:syslog_version} %{TIMESTAMP_ISO8601:syslog_timestamp} %{IPORHOST:syslog_hostname} %{NOTSPACE:system_name} %{NONNEGINT:syslog_pid} %{NOTSPACE:syslog_msgid} - CEF:0\|ALERT\|%{TIMESTAMP_ISO8601:occurredAt}\|%{NUMBER:organizationId}\|%{DATA:organizationName}\|%{WORD:networkId}\|%{DATA:networkName}\|%{NUMBER:alertId}\|%{DATA:alertType}\|"}
+            add_tag =&gt; [ "MERAKI_SM_ALERT" ]
+          }
+          if("MERAKI_SM_ALERT" in [tags]) {
+            mutate {
+                add_field =&gt; [ 'Event:Event-Name', 'ALERT' ]
+                add_field =&gt; [ 'Event:Threat-Name', '%{alertType}' ]
+                add_field =&gt; [ 'Event:Timestamp', '%{syslog_timestamp}' ]
+                add_field =&gt; [ 'Event:Signature-id', '%{alertId}' ]
+                add_field =&gt; [ 'Event:Device-vendor', 'Meraki' ]
+                add_field =&gt; [ 'Event:Pattern-Name', 'System-Manager' ]
+                add_field =&gt; [ 'Event:Organization-ID', '%{organizationId}' ]
+                add_field =&gt; [ 'Event:Organization-Name', '%{organizationName}' ]
+                add_field =&gt; [ 'Event:Network-ID', '%{networkId}' ]
+                add_field =&gt; [ 'Event:Network-Name', '%{networkName}' ]
+            }
+            ruby {
+              code =&gt; "
+              data = event.clone.to_hash;
+              data.each do |k,v|
+                if (k != '@timestamp' and !k.start_with?('Event:') and !k.start_with?('@'))
+                  newFieldName = 'Event:Meraki-Alert:'+ k
+                  event[newFieldName] = v
+                  event.remove(k)
+                end
+              end
+              tstamp = Time.now.to_i
+              tstamp_str = Time.at(tstamp).strftime('%Y-%m-%d %H:%M:%S')
+              event['Event:Timestamp'] = tstamp_str
+            "
+            }
+          }
+       }</Filter>
+      <FieldMapping>
+        <Field AllowedValues="" DataType="String" Name="syslog_hostName"/>
+        <Field AllowedValues="" DataType="Integer" Name="syslog_priority"/>
+        <Field AllowedValues="" DataType="String" Name="syslog_timestamp"/>
+        <Field AllowedValues="" DataType="Integer" Name="version"/>
+        <Field AllowedValues="" DataType="String" Name="networkName"/>
+        <Field AllowedValues="" DataType="String" Name="organizationName"/>
+        <Field AllowedValues="" DataType="String" Name="networkId"/>
+        <Field AllowedValues="" DataType="Integer" Name="organizationId"/>
+        <Field AllowedValues="" DataType="String" Name="alertType"/>
+        <Field AllowedValues="" DataType="Integer" Name="alertId"/>
+        <Field AllowedValues="" DataType="String" Name="occurredAt"/>
+      </FieldMapping>
+      <GenericFieldMapping>
+        <Field GenericName="Timestamp" Name="syslog_timestamp"/>
+        <Field GenericName="Occurred-At" Name="occurredAt"/>
+        <Field GenericName="Threat-Name" Name="alertType"/>
+        <Field GenericName="Organization-Name" Name="organizationName"/>
+        <Field GenericName="Organization-ID" Name="organizationId"/>
+        <Field GenericName="Network-Name" Name="networkName"/>
+        <Field GenericName="Network-ID" Name="networkId"/>
+      </GenericFieldMapping>
+    </IngressEvent>
+  </IngressEvents>
+</TipsContents>
