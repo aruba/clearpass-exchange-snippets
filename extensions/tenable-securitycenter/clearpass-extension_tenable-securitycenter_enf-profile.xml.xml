@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Tue May 30 11:39:20 UTC 2023" version="6.11"/>
+  <PostAuthEnfProfiles>
+    <PostAuthEnfProfile description="" name="Trigger Tenable Scan" postAuthType="SessionNotify">
+      <AttributeList>
+        <Attribute displayValue="Generic HTTP Context Server" value="HTTP" name="Server Type" type="Session-Notify"/>
+        <Attribute displayValue="172.17.0.2" value="172.17.0.2" name="Server IP" type="Session-Notify"/>
+        <Attribute displayValue="Tenable Scan" value="Tenable Scan" name="Login Action" type="Session-Notify"/>
+      </AttributeList>
+    </PostAuthEnfProfile>
+  </PostAuthEnfProfiles>
+  <ContextServers>
+    <ContextServer ipVersion="ipV4" authMethod="basic" bypassProxy="false" enableServer="true" validateServer="false" password="" username="" baseUrl="http://172.17.0.2" type="HTTP" server="172.17.0.2"/>
+  </ContextServers>
+  <ContextServerActions>
+    <ContextServerAction content="{##NEWLINE##&amp;quot;ip&amp;quot;:&amp;quot;%{ip}&amp;quot;##NEWLINE##}" contentType="JSON" url="/scan" authMethod="basic" method="POST" description="" serverName="172.17.0.2" action="Tenable Scan" type="HTTP">
+      <Headers value="application/json" name="content-type"/>
+    </ContextServerAction>
+  </ContextServerActions>
+</TipsContents>

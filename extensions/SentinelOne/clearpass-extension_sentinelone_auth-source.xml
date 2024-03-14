@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TipsContents xmlns="http://www.avendasys.com/tipsapiDefs/1.0">
+  <TipsHeader exportTime="Wed Feb 22 11:16:21 UTC 2023" version="6.11"/>
+  <AuthSources>
+    <AuthSource description="" name="SentinelOne-AuthZ-Src" isAuthorizationSource="true" type="HTTP">
+      <NVPair value="http://x.x.x.x" name="base_url"/>
+      <NVPair value="notneeded" name="username"/>
+      <NVPair value="" name="password"/>
+      <NVPair value="60" name="timeout"/>
+      <Filters>
+        <Filter paramValues="" filterQuery="/%{Connection:Client-Mac-Address-Colon}" filterName="SentinelOne-Filter">
+          <Attributes>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="Integer" aliasName="SentinelOne Active Threats" attrName="SentinelOne Active Threats"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="Boolean" aliasName="SentinelOne Infected" attrName="SentinelOne Infected"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="String" aliasName="SentinelOne Scan Status" attrName="SentinelOne Scan Status"/>
+            <Attribute isUserAttr="true" isRole="false" attrDataType="Date-Time" aliasName="SentinelOne Scan Finished At" attrName="SentinelOne Scan Finished At"/>
+          </Attributes>
+        </Filter>
+      </Filters>
+    </AuthSource>
+  </AuthSources>
+</TipsContents>
