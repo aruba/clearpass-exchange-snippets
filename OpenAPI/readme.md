@@ -1,0 +1,1 @@
+OpenAPI Specification enables standardized REST API integration between HPE Networking ClearPass Policy Manager and third-party security, IT, and operational systems. By leveraging OpenAPI-based interfaces, organizations can automate device onboarding, policy enforcement, asset synchronization, and security workflows across complex IoT environments.
